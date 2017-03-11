@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            width: 10px;
+            display: inline-block;
+            background-color: red;
+            text-align: center;
+            color:white;
+            margin-left:10px;
+            font-size:16px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="text" id="inp">
+<div id="warp-btn">
+    <button id="left-in">左侧入</button>
+    <button id="right-in">右侧入</button>
+    <button id="left-out">左侧出</button>
+    <button id="right-out">右侧出</button>
+</div>
+<div id="list">
+</div>
+</body>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+    var list = $("list");
+    var arr = [];
+    var inp = $("inp");
+    var rightIn = $("right-in");
+    var leftIn = $("left-in");
+    var rightOut = $("right-out");
+    var leftOut = $("left-out");
+    var warpBtn = $("warp-btn");
+    rightIn.onclick = function() {
+        var num = +inp.value;
+        if (typeof num == "number" && num >= 10 && num <= 100 ) {
+            if( arr.length >= 60) {
+                alert("队列数量超过60无法添加");
+                return
+            }
+            arr.push(num);
+        }
+    }
+    leftIn.onclick = function() {
+        var num = +inp.value;
+        if (typeof num == "number" && num >= 10 && num <= 100 ) {
+            if( arr.length >= 60) {
+                alert("队列数量超过60无法添加");
+                return
+            }
+        arr.unshift(num);
+        }
+    }
+
+    rightOut.onclick = function() {
+        alert(arr.pop());
+    }
+    leftOut.onclick = function() {
+        alert(arr.shift());
+    }
+    warpBtn.onclick = function() {
+        list.innerHTML = "";
+        for(var i = 0,len = arr.length;i < len;i++) {
+            var sp = document.createElement("span");
+            sp.style.height = arr[i] + "px";showModalDialog()
+            list.appendChild(sp);
+        }
+    }
+</script>
+</html>
