@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+        div {
+            border:1px solid black;
+            display: inline-block;
+            font-size:0px;
+        }
+        .tree {
+            margin:200px 0 0 200px ;
+            width: 800px;
+            height: 200px;
+
+        }
+        .tree>div{
+            width: 45%;
+            height: 45%;
+            margin-top:50px;
+            margin-left:25px;
+        }
+        .tree>div>div {
+            width: 45%;
+            height: 45%;;
+            margin-top:25px;
+            margin-left:12px;
+        }
+        .tree>div>div>div {
+            width: 45%;
+            height: 45%;
+            margin-top:12px;
+            margin-left:4px;
+        }
+    </style>
+</head>
+<body>
+<div class="tree">
+    <div class="">
+        <div class="">
+            <div class=""></div>
+            <div class=""></div>
+        </div>
+        <div class="">
+            <div class=""></div>
+            <div class=""></div>
+        </div>
+    </div>
+    <div class="">
+        <div class="">
+            <div class=""></div>
+            <div class=""></div>
+        </div>
+        <div class="">
+            <div class=""></div>
+            <div class=""></div>
+        </div>
+    </div>
+</div>
+<button id="btn">二叉树遍历</button>
+</body>
+<script>
+    var time = 0;
+    var btn = document.getElementById("btn");
+    var tree = document.getElementsByClassName("tree")[0];
+    btn.onclick  = function() {
+        binaryTree(tree);
+    }
+    function binaryTree(el) {
+        el.parentNode.style.backgroundColor = "white";
+        if (el != null) {
+            el.style.backgroundColor = "blue";
+            setTimeout(function() {binaryTree(el.children[0])},time++ * 500);
+            setTimeout(function(){binaryTree(el.children[1])},time * 500);
+        }
+    }
+</script>
+</html>

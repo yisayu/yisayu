@@ -132,6 +132,11 @@
            width: 100%;
            height:100%
        }
+        #mus {
+            position: absolute;
+            right: 100px;
+            top: 200px;
+        }
     </style>
     <script src="jquery-3.1.1.js"></script>
     <script src="vue.js"></script>
@@ -185,14 +190,24 @@
         <audio src="music/sound6.mp3" id="sound6"></audio>
         <audio src="music/sound7.mp3" id="sound7"></audio>;
     </div>
-    <textarea name="textt" id="textt" cols="30" rows="10"></textarea>
-    <button id="btn2" v-on:click="music">播放</button>
-    <div id="wy">
-        <select name="songs" id="songs">
-            <option value="0">歌曲列表</option>
-        </select>
+    <div id="mus">
+        <div id="wy">
+            <textarea name="textt" id="textt" cols="30" rows="10"></textarea>
+            <button id="btn2" v-on:click="music">播放</button>
+            <button id="stop">停止播放</button>
+            <select name="songs" id="songs">
+                <option value="0">歌曲列表</option>
+            </select>
+            <select name="speed" id="speed">
+                <option value="500">1倍速</option>
+                <option value="1000">0.5倍速</option>
+                <option value="420">1.3倍速</option>
+                <option value="350">1.6倍速</option>
+                <option value="300">1.8倍速</option>
+                <option value="250">2.0倍速</option>
+            </select>
+        </div>
     </div>
-
 </body>
 
 <script>
@@ -218,6 +233,19 @@
             }
         }
     }  );
+    var Timer = null;
+    var speed = 500;
+
+    var speedBtn = $("#speed");
+    speedBtn[0].onchange = function() {
+        speed = +speedBtn[0].value;
+        console.log(speed);
+    }
+    var stop = $("#stop");
+    stop[0].onclick = function() {
+        console.log("huhu");
+        clearTimeout(Timer);
+    }
     function playMusic(array) {
         var arr = [];
         for(var i = 0,len = array.length;i < len;i++) {
@@ -229,19 +257,20 @@
         for(var i = 0,len = arr.length;i < len;i++) {
             var num = parseInt(arr[i]);
             if(typeof num == "number" && num > 0 && num < 8) {
-                console.log("哈哈");
-                    setTimeout(function(num) {
+                  Timer =  setTimeout(function(num) {
                         return function() { $(".musics").children()[num-1].currentTime = "0";
                             $(".musics").children()[num-1].play();}
 
-                    }(num),(i+blockTime)*500);
+                    }(num),(i+blockTime)*speed);
 
             }else if(arr[i] == "-") {
-                console.log("哈哈");
                 blockTime += 1;
             }
         }
     }
+
+
+
     var array = [];
     $.getJSON('songs.json',function(data) {
         var y = 0;
@@ -254,7 +283,5 @@
                 textt[0].innerHTML = array[+this.value];
         }
     });
-    numm = " ";
-    console.log(typeof parseInt(numm) == "number");
 </script>
 </html>
