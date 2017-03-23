@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #tp {
+            margin:0 auto;
+            width: 980px;
+            padding:0 44px;
+        }
+        /*css-head-bng*/
+        #head {
+            position: relative;
+            height: 61px;;
+            border-bottom:#938e8c 2px solid ;
+        }
+        #red-box {
+            width: 110px;
+            height: 61px;
+            background-color: #D45C4B;
+        }
+        #url {
+            position: absolute;
+            top:45px;
+            left:10px;
+            color: #fff;
+            font: 12px "黑体"
+        }
+        #time {
+            position: absolute;
+            top:45px;
+            right:10px;
+            color:#d45d5c;
+        }
+        /*css-head-end*/
+        /*css-middle-bng*/
+        #middle {
+            position: relative;
+            margin-top: 35px;
+            height: 516px;
+            background-color: red;
+        }
+        #head-left {
+            position: relative;
+            width: 641px;
+            height: 310px;
+        }
+        #head-left img {
+            width: 641px;
+            height: 310px;
+        }
+        #shade-left {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 191px;
+            height: 310px;
+            background-color: green;
+            opacity: 0.5;
+        }
+        #shade-right {
+            position: absolute;
+            width: 191px;
+            height: 310px;
+            top: 0;
+            right: 0;
+            background-color: red;
+            opacity: 0.5;
+        }
+        #head-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-top: #cc8091 2px solid ;
+            width: 203px;
+            height: 641px;
+        }
+        /*css-middle-end*/
+        /*css-bot-bng*/
+        #bot {
+            margin-top: 68px;
+            height: 646px;
+            background-color: green;
+        }
+        /*css-bot-end*/
+        #last {
+            position: relative;
+            height: 61px;
+            margin-top: 40px;
+            border-top: #938e8c 1px solid;
+        }
+        #last span {
+            position: absolute;
+            right: 10px;
+            bottom: 45px;
+            font: 12px  "黑体";
+            color: #d45d5c;
+        }
+
+    </style>
+</head>
+<body>
+<div id="tp">
+    <div id="head">
+        <div id="red-box">
+    </div>
+    <p id="url">ife.baidu.com</p>
+    <p id="time">2017.3.23</p>
+</div>
+    <div id="middle">
+        <div id="head-left"> <div id="shade-left"></div><div id="shade-right"></div>
+            <div><img src="images/leftTop.jpg" alt=""></div>
+        </div>
+        <div id="head-right"></div>
+        <div id="head-bot">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div>
+    <div id="bot"></div>
+    <div id="last">
+        <span>ife.baidu,com</span>
+    </div>
+</div>
+
+</body>
+</html>
