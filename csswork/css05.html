@@ -66,6 +66,9 @@
         .clearfix {
             zoom:1;
         }
+        #para-one img{
+            width: 100%;
+        }
         .pic {
             display: inline-block;
             padding:0 5px 0 5px;
@@ -123,13 +126,16 @@
             background-color: #3355D0;
         }
         #para-one,#para-two,#para-last {
-            width: 60%;
+            width: 100%
         }
         #para-form {
             position: absolute;
             top: 60px;
             right: 30px;
             width: 500px;
+        }
+        #para {
+            padding-right:700px;
         }
     </style>
 </head>
@@ -143,8 +149,8 @@
         <li><a href="">导航链接</a></li>
     </ul>
 </div>
-<div></div>
-<div id="para-one"  class="paras">
+<div id="para">
+    <div id="para-one"  class="paras">
     <h2>文章标题</h2>
     <h3>文章标题</h3>
     <p>
@@ -160,50 +166,52 @@
             href="http://ife.baidu.com" target="_blank">链接链接</a>章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章段落文章
     </p>
 </div>
-<div id="para-two" class="paras clearfix"><ul>
-    <li>列表一/li>
-    <li>列表二</li>
-    <li>列表三</li>
-</ul>
-    <h2>图片</h2>
-    <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
-    <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
-    <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
-    <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div></div>
-<div id="para-last" class="paras"><h2>最后标题</h2>
-    <h2>最后标题</h2>
+    <div id="para-two" class="paras clearfix">
+        <ul>
+            <li>列表一/li>
+            <li>列表二</li>
+            <li>列表三</li>
+        </ul>
+        <h2>图片</h2>
+        <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
+        <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
+        <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
+        <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div> <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div></div>
+    <div id="para-last" class="paras"><h2>最后标题</h2>
+        <h2>最后标题</h2>
 
-    <ol>
-        <li>列表</li>
-        <li>列表</li>
-        <li>列表</li>
-    </ol>
-    <table cellspacing="0px" >
-        <colgroup>
-            <col width="40%"> <col width="40%"> <col width="20%">
-        </colgroup>
-        <thead>
-        <tr>
-            <th>标题</th>
-            <th>标题</th>
-            <th>标题</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td>列表</td>
-            <td>列表</td>
-            <td>列表</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr><td>總計</td>
-            <td>1000</td>
-            <td></td></tr>
+        <ol>
+            <li>列表</li>
+            <li>列表</li>
+            <li>列表</li>
+        </ol>
+        <table cellspacing="0px" >
+            <colgroup>
+                <col width="40%"> <col width="40%"> <col width="20%">
+            </colgroup>
+            <thead>
+            <tr>
+                <th>标题</th>
+                <th>标题</th>
+                <th>标题</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>列表</td>
+                <td>列表</td>
+                <td>列表</td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr><td>總計</td>
+                <td>1000</td>
+                <td></td></tr>
 
-        </tfoot>
-    </table>
-</div>
+            </tfoot>
+        </table>
+    </div></div>
+
 
 <div id="para-form" class="paras">
     <div id="sideTitle"><h2>側欄標題</h2></div>
@@ -235,6 +243,5 @@
 </div>
 <div id="copy">所有版权&copy</div>
 
-</form>
 </body>
 </html>
