@@ -16,8 +16,8 @@
             list-style: none;
         }
         body {
-             background-color: #DEDEDE;
-         }
+            background-color: #DEDEDE;
+        }
         #title {
             float: left;
         }
@@ -44,7 +44,7 @@
             box-shadow:  2px 2px 3px #848484  ;
             padding:36px 20px;
         }
-       .paras>p {
+        .paras>p {
             text-indent: 2em;
         }
         #copy {
@@ -67,12 +67,13 @@
             zoom:1;
         }
         .pic {
+            display: inline-block;
             padding:0 5px 0 5px;
             width: 100px;
             height: 100px;
             text-align: center;
             border:#848484 1px solid ;
-            margin:15px 40px;
+            margin:15px 10px;
         }
         .pic img {
 
@@ -103,9 +104,9 @@
         }
         form p {
             display: inline-block;
-            width: 360px;
+            width: 100px;
             text-align: right;
-            padding-right:20px;
+            padding-right:10px;
         }
         form>div>p {
             vertical-align: top;
@@ -120,6 +121,15 @@
             height: 38px;
             border-radius: 5px;
             background-color: #3355D0;
+        }
+        #para-one,#para-two,#para-last {
+            width: 60%;
+        }
+        #para-form {
+            position: absolute;
+            top: 60px;
+            right: 30px;
+            width: 500px;
         }
     </style>
 </head>
@@ -155,7 +165,7 @@
     <li>列表二</li>
     <li>列表三</li>
 </ul>
-<h2>图片</h2>
+    <h2>图片</h2>
     <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
     <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
     <div class="pic"><p>好看的图片</p><img src="images/im.jpg" alt=""></div>
@@ -187,15 +197,15 @@
         </tr>
         </tbody>
         <tfoot>
-            <tr><td>總計</td>
-                <td>1000</td>
-                <td></td></tr>
+        <tr><td>總計</td>
+            <td>1000</td>
+            <td></td></tr>
 
         </tfoot>
     </table>
 </div>
 
-<div class="paras">
+<div id="para-form" class="paras">
     <div id="sideTitle"><h2>側欄標題</h2></div>
     <div id="form" class="clearfix">
         <form action="">
@@ -210,17 +220,17 @@
                     <option value="">四川</option>
                     <option value="">北京</option>
                     <option value="">上海</option>
-                 </select><br>
+                </select><br>
             </div>
             <div>
                 <p>愛好:</p><input type="checkbox" name="check">运动<input type="checkbox" name="check">运动<input
                     type="checkbox" name="check">运动<input type="checkbox" name="check">运动 <br>
             </div>
             <div>
-                <p>個人簡介:</p><textarea name="haha" id="" cols="60" rows="10" placeholder="輸入您的個人簡介"></textarea> <br>
+                <p>個人簡介:</p><textarea name="haha" id="" cols="50" rows="10" placeholder="輸入您的個人簡介"></textarea> <br>
                 <input id="submit" type="submit" value="確認提交">
             </div>
-            </form>
+        </form>
     </div>
 </div>
 <div id="copy">所有版权&copy</div>
