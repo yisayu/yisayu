@@ -1,0 +1,200 @@
+/*公共样式*/
+body {
+    font-family: "Microsoft YaHei ";
+}
+/*公共样式*/
+/*头部-bng*/
+#header {
+}
+@font-face {
+    font-family: "itcast";
+    src:url("../font/MiFie-Web-Font.eot") format("embedded-opentype"),url("../font/MiFie-Web-Font.svg") format("svg"),url("../font/MiFie-Web-Font.ttf") format("ttf"),url("../font/MiFie-Web-Font.woff") format("woff");
+}
+[class^="icon-"],[class*=" icon-"] {
+    font-family: itcast;
+    font-style: normal;
+}
+.icon-mobilephone::before {
+    content: "\e908";
+    font-size:13px;
+}
+.icon-telephone::before {
+    content: '\e909';
+    font-size:15px;
+}
+.icon-icon::before {
+    content: "\e920";
+
+}
+.icon-log::before {
+    content:"\e93e";
+}
+#header>.topbar {
+    height: 40px;
+    border-bottom:1px solid #c0c0c0;;
+}
+#header>.topbar>.container>.row>div + div {
+    border-left:1px solid #c0c0c0;
+}
+#header .mobile-link {
+    font-size: 12px;
+    color: #888;
+}
+#header .mobile-link>img {
+    display: none;
+}
+#header .mobile-link:hover>img {
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left:-60px;
+    top: 28px;
+    z-index:1001;
+
+}
+#header .mobile-link:hover {
+    text-decoration: none;
+}
+
+#header>.topbar>.container {
+    height: 40px;
+}
+#header>.topbar>.container>.row>div {
+    height: 40px;
+    line-height: 40px;
+    color: #888;
+}
+.navbar-itcase {
+    background-color: #fff;
+    border-color: #f5f5f5;
+}
+.navbar-itcase .navbar-brand {
+    color: #777;
+}
+.navbar-itcase .navbar-brand:hover,
+.navbar-itcase .navbar-brand:focus {
+    color: #5e5e5e;
+    background-color: transparent;
+}
+.navbar-itcase .navbar-text {
+    color: #777;
+}
+
+.navbar-itcase .navbar-nav > li > a {
+    color: #777;
+    line-height: 50px;
+    font-size: 14px;
+}
+.navbar-itcase .navbar-nav > li > a:hover,
+.navbar-itcase .navbar-nav > li > a:focus {
+    height: 79px;
+    border-bottom:2px solid red;
+    background-color: transparent;
+}
+.navbar-itcase .navbar-nav > .active > a,
+.navbar-itcase .navbar-nav > .active > a:hover,
+.navbar-itcase .navbar-nav > .active > a:focus {
+    border-bottom:2px solid red;
+    background-color: transparent;
+}
+.navbar-itcase .navbar-nav > .disabled > a,
+.navbar-itcase .navbar-nav > .disabled > a:hover,
+.navbar-itcase .navbar-nav > .disabled > a:focus {
+    color: #ccc;
+    background-color: transparent;
+}
+.navbar-itcase .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-itcase .navbar-toggle:hover,
+.navbar-itcase .navbar-toggle:focus {
+    background-color: #ddd;
+}
+.navbar-itcase .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-itcase .navbar-collapse,
+.navbar-itcase .navbar-form {
+    border-color: #e7e7e7;
+}
+.navbar-itcase .navbar-nav > .open > a,
+.navbar-itcase .navbar-nav > .open > a:hover,
+.navbar-itcase .navbar-nav > .open > a:focus {
+    color: #555;
+    background-color: #e7e7e7;
+}
+@media (max-width: 767px) {
+    .navbar-itcase .navbar-nav .open .dropdown-menu > li > a {
+        color: #777;
+    }
+    .navbar-itcase .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-itcase .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #333;
+        background-color: transparent;
+    }
+    .navbar-itcase .navbar-nav .open .dropdown-menu > .active > a,
+    .navbar-itcase .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .navbar-itcase .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #555;
+        background-color: #e7e7e7;
+    }
+    .navbar-itcase .navbar-nav .open .dropdown-menu > .disabled > a,
+    .navbar-itcase .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .navbar-itcase .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #ccc;
+        background-color: transparent;
+    }
+}
+.navbar-itcase .navbar-link {
+    color: #777;
+}
+.navbar-itcase .navbar-link:hover {
+    color: #333;
+}
+.navbar-itcase .btn- link {
+    color: #777;
+}
+.navbar-itcase .btn-link:hover,
+.navbar-itcase .btn-link:focus {
+    color: #333;
+}
+.navbar-itcase .btn-link[disabled]:hover,
+fieldset[disabled] .navbar-itcase .btn-link:hover,
+.navbar-itcase .btn-link[disabled]:focus,
+fieldset[disabled] .navbar-itcase .btn-link:focus {
+    color: #ccc;
+}
+#header .navbar-brand {
+    height: 80px;
+}
+#header .icon-icon{
+    color: red;
+    font-size: 50px;
+    line-height:50px;
+    vertical-align: middle;
+}
+#header .icon-log {
+    color:black;
+    font-size: 32px;
+    vertical-align: middle;
+
+}
+section {
+    height: 200px;
+    background-color: #fff;
+}
+section:nth-of-type(2n+1) {
+    background-color: #f5f5f5;
+}
+/*头部-end*/
+/*轮播-bng*/
+/*轮播-end*/
+/*特色-bng*/
+/*特色-end*/
+/*产品-bng*/
+/*产品-end*/
+/*合作-bng*/
+/*合作-end*/
+/*脚注-bng*/
+/*脚注-end*/
+
