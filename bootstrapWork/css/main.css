@@ -67,6 +67,7 @@ body {
 .navbar-itcase {
     background-color: #fff;
     border-color: #f5f5f5;
+    margin-bottom: 0px;
 }
 .navbar-itcase .navbar-brand {
     color: #777;
@@ -188,6 +189,16 @@ section:nth-of-type(2n+1) {
 }
 /*头部-end*/
 /*轮播-bng*/
+#main-ad>div>div>div {
+    height: 410px;
+}
+#main-ad img {
+    position: absolute;
+    min-width: 2000px;
+    max-width:2000px;
+    left: 50%;
+    margin-left: -1000px;
+}
 /*轮播-end*/
 /*特色-bng*/
 /*特色-end*/
