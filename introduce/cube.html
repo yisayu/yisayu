@@ -19,20 +19,20 @@
 
             transition: 0.6s;
             transform-style: preserve-3d;
-            transform-origin: 50% 50% -300px;
+            transform-origin: 50% 50% -200px;
             backface-visibility: visible;
             position: relative;
-            margin-left:500px;
-            width: 600px;
-            height: 600px;
+            margin-left:400px;
+            width: 400px;
+            height: 400px;
             /*overflow:hidden;*/
         }
         #my-cube .face {
             position: absolute;
-            width: 600px;
-            height: 600px;
+            width: 400px;
+            height: 400px;
             text-align: center;
-            line-height:600px;
+            line-height:400px;
             font-size: 30px;
             border: blanchedalmond 0px solid;
             box-shadow: inset 0 0 50px white;
@@ -40,22 +40,22 @@
         #left {
             transform: rotateY(-90deg);
             transform-origin: right;
-            left:-600px;
+            left:-400px;
         }
         #right {
             transform: rotateY(90deg);
             transform-origin: left;
-            left:600px;
+            left:400px;
         }
         #back {
-            transform: translateZ(-600px);
+            transform: translateZ(-400px);
         }
         #front {
         }
         #bottom {
             transform: rotateX(-90deg);
             transform-origin: top;
-            top:600px;
+            top:400px;
         }
         button:hover {
             border: black 3px solid;
@@ -64,7 +64,7 @@
         #top {
             transform: rotateX(90deg);
             transform-origin: bottom;
-            top:-600px;
+            top:-400px;
         }
         #show-back:checked~#show #my-cube {
             -webkit-transform: rotateX(0deg) rotateY(180deg);
@@ -94,7 +94,7 @@
         }
         .labels {
             position: absolute;
-            top: 200px;
+            top: 100px;
             left:0px;
 
         }
@@ -115,7 +115,7 @@
         }
         .black-key {
             position: absolute;
-            top: 258px;
+            top: 158px;
         }
         .black-key div {
             width: 160px;
@@ -125,7 +125,7 @@
             border-radius: 5% 5%;
         }
         #pic {
-            width: 150px;
+            width: 200px;
             height: 210px;
         }
        #pic img {
@@ -134,8 +134,9 @@
        }
         #mus {
             position: absolute;
-            right: 100px;
-            top: 200px;
+            right: 50px;
+            bottom: 100px;
+            margin-bottom: 50px;
         }
     </style>
     <script src="jquery-3.1.1.js"></script>
@@ -164,13 +165,13 @@
         </div>
     </div>
     <div class="labels">
-        <label for="show-front" id="btn-show-front">前</label>
-        <label for="show-back" id="btn-show-back">后</label>
-        <label for="show-left" id="btn-show-left">左</label>
-        <label for="show-right" id="btn-show-right">右</label>
-        <label for="show-top" id="btn-show-top">上</label>
-        <label for="show-bottom" id="btn-show-bottom">下</label>
-        <label for="show-side" id="btn-show-side">立体</label>
+        <label for="show-front" id="btn-show-front"></label>
+        <label for="show-back" id="btn-show-back"></label>
+        <label for="show-left" id="btn-show-left"></label>
+        <label for="show-right" id="btn-show-right"></label>
+        <label for="show-top" id="btn-show-top"></label>
+        <label for="show-bottom" id="btn-show-bottom"></label>
+        <label for="show-side" id="btn-show-side"></label>
     </div>
     <div class="black-key">
         <div></div>
@@ -192,12 +193,14 @@
     </div>
     <div id="mus">
         <div id="wy">
-            <textarea name="textt" id="textt" cols="30" rows="10"></textarea>
+            <textarea name="textt" id="textt" cols="30" rows="10"></textarea><br>
             <button id="btn2" v-on:click="music">播放</button>
+            <br>
             <button id="stop">停止播放</button>
+            <br>
             <select name="songs" id="songs">
                 <option value="0">歌曲列表</option>
-            </select>
+            </select><br>
             <select name="speed" id="speed">
                 <option value="500">1倍速</option>
                 <option value="1000">0.5倍速</option>
